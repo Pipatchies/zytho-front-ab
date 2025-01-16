@@ -1,4 +1,3 @@
-import { Header } from "../components/header";
 import { useBeer } from "./hooks/useBeer"
 import { BeerCard } from "../components/beerCard";
 
@@ -26,20 +25,19 @@ if (error) {
 
 return (
   <div className="">
-    <Header/>
     <div className="max-w-7xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <div className="bg-yellow-400 bg-opacity-80 text-white p-4 rounded-lg shadow-md">
+        <div className="bg-yellow-600 bg-opacity-70 text-white p-4 rounded-lg shadow-md">
           <h1 className="text-3xl font-bold">Nos Bières Artisanales</h1>
         </div>
       </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {beers.map((beer) => (
         <BeerCard key={beer.id} beer={beer} />
       ))}
     </div>
-        </div>
-      </div>
+  </div>
+</div>
 );
 };
 
