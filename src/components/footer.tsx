@@ -13,13 +13,13 @@ export const Footer: React.FC = () => {
           className="top-4 left-4 w-28 h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg" 
         />
             <div className="flex flex-col mb-4 md:mb-0 gap-2">
-              <a href="/" className="text-5xl hover:bg-yellow-600 rounded-md py-2 border-b border-yellow-600">
+              <a href="/" className="text-5xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600">
                 Home
               </a>
-              <a href="/beers" className="text-2xl hover:bg-yellow-600 px-3 py-2 rounded-md">
+              <a href="/beers" className="text-2xl hover:text-yellow-600 px-3 py-2 rounded-md">
                 Beers
               </a>
-              <a href="/breweries" className="text-2xl hover:bg-yellow-600 px-3 py-2 rounded-md">
+              <a href="/breweries" className="text-2xl hover:text-yellow-600 px-3 py-2 rounded-md">
                 Brewerys
               </a>
             </div>

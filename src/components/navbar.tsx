@@ -52,19 +52,19 @@ export const Navbar = () => {
         <div className="flex flex-col items-start mt-16 space-y-4 px-20">
           <Link
             to="/"
-            className="text-white flex hover:bg-yellow-600 px-3 py-2 rounded-md text-5xl font-semibold font-oswald"
+            className="text-white flex hover:text-yellow-600 px-3 py-2 rounded-md text-5xl font-semibold font-oswald"
           >
             <HomeIcon className="h-10 w-10 mr-2 mt-1" /> HOME
           </Link>
           <Link
             to="/beers-catalog"
-            className="text-white opacity-75 flex hover:bg-yellow-600 px-9 py-2 ml-10 rounded-md text-3xl font-semibold font-oswald"
+            className="text-white opacity-75 flex hover:text-yellow-600 px-9 py-2 ml-10 rounded-md text-3xl font-semibold font-oswald"
           >
             <FireIcon className="h-8 w-8 mr-2 mt-1" /> BEERS
           </Link>
           <Link
             to="/brewerys-catalog"
-            className="text-white opacity-75 flex hover:bg-yellow-600 px-9 py-2 ml-10 rounded-md text-3xl font-semibold font-oswald"
+            className="text-white opacity-75 flex hover:text-yellow-600 px-9 py-2 ml-10 rounded-md text-3xl font-semibold font-oswald"
           >
             <BuildingStorefrontIcon className="h-8 w-8 mr-2 mt-1" /> BREWERYS
           </Link>
