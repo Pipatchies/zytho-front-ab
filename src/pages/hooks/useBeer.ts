@@ -16,7 +16,7 @@ export const useBeer = () => {
             } catch (err: any) {
                 setError("Erreur lors de la récupération des bières.");
             } finally {
-                    setLoading(false);
+                setLoading(false);
             }
         };
 
