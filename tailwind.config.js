@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         oswald: ['Oswald', 'sans-serif'],
+        nunito: ["'Nunito'", "sans-serif"],
       },
     },
   },
