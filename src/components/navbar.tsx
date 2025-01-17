@@ -14,7 +14,7 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="relative">
+    <nav className="relative z-50">
       <div
         className={`fixed top-0 right-0 h-screen bg-gray-900 shadow-lg transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
