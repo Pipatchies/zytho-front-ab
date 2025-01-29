@@ -5,21 +5,21 @@ export const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 font-oswald">
       <div className="container mx-auto px-6 ">
-        <div className="flex flex-col md:flex-row justify-center gap-96 items-center">
+        <div className="flex md:flex-row justify-center md:gap-96 sd:gap-44 gap-12 items-center">
           <div className="flex items-center gap-8">
           <img 
           src={logo} 
           alt="Logo Zythologue" 
-          className="top-4 left-4 w-28 h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg" 
+          className="top-4 left-4 sm:w-28 sm:h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg w-20 h-20" 
         />
             <div className="flex flex-col mb-4 md:mb-0 gap-2">
-              <a href="/" className="text-5xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600">
+              <a href="/" className="sm:text-5xl text-2xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600">
                 Home
               </a>
-              <a href="/beers" className="text-2xl hover:text-yellow-600 px-3 py-2 rounded-md">
+              <a href="/beers" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md">
                 Beers
               </a>
-              <a href="/breweries" className="text-2xl hover:text-yellow-600 px-3 py-2 rounded-md">
+              <a href="/breweries" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md">
                 Brewerys
               </a>
             </div>
@@ -31,7 +31,7 @@ export const Footer: React.FC = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
+              className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
               aria-label="Facebook"
             >
               <i className="fab fa-facebook-f"></i>
@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
+              className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
               aria-label="Instagram"
             >
               <i className="fab fa-instagram"></i>
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
+              className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
               aria-label="Twitter"
             >
               <i className="fab fa-twitter"></i>
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center text-sm gap-28 border-t-2 border-yellow-600 pt-6 mt-6">
+        <div className="flex flex-col md:flex-row justify-center items-center text-sm md:gap-28 gap-6 border-t-2 border-yellow-600 pt-6 mt-6">
 
           <div className="flex items-center">
             <p>

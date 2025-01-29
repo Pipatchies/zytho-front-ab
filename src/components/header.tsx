@@ -9,11 +9,11 @@ export const Header = () => {
       <img 
           src={logo} 
           alt="Logo Zythologue" 
-          className="absolute top-4 left-4 w-28 h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg" 
+          className="absolute top-4 left-4 md:w-28 md:h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg w-20 h-20" 
         />
         <div className="flex flex-col justify-center items-center h-full bg-black bg-opacity-65 space-y-4">
-            <h1 className="font-oswald text-8xl font-bold text-white shadow-2xl">Zythologue</h1>
-            <h2 className="font-oswald text-3xl font-bold text-white">Pour tous les amateurs de mousses artisanales</h2>
+            <h1 className="font-oswald md:text-8xl text-7xl font-bold text-white shadow-2xl">Zythologue</h1>
+            <h2 className="flex font-oswald md:text-3xl text-2xl font-bold text-white mx-10 text-center">Pour tous les amateurs de mousses artisanales</h2>
         </div>
         <Navbar/>
       </header>
