@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BeerResBody } from "../../interfaces/beerInterface";
 import { getBeers } from "../../services/beersService";
+import { getPhotoByBeerId } from "../../services/photosService";
 
 export const useBeer = () => {
     const [beers, setBeers] = useState<BeerResBody[]>([]);
@@ -9,12 +10,18 @@ export const useBeer = () => {
 
     useEffect(() => {
         const fetchBeers = async () => {
+            setLoading(true);
             try {
-                const data = await getBeers();
-                console.log("Données récupérées:", data); 
-                setBeers(data);
+                const beerData = await getBeers();
+                const beersWithPhotos = await Promise.all(
+                    beerData.map(async (beer) => {
+                        const photos = await getPhotoByBeerId(beer.id);
+                        return { ...beer, photos };
+                    })
+                );
+                setBeers(beersWithPhotos);  
             } catch (err: any) {
-                setError("Erreur lors de la récupération des bières.");
+                setError("Erreur lors de la récupération des bières et des photos.");
             } finally {
                 setLoading(false);
             }
