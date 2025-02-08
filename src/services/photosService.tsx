@@ -17,8 +17,8 @@ export const getPhotoByBeerId = async (beerId: number): Promise<PhotoResBody[]> 
 // Fonction pour récupérer toutes les photos
 export const getPhotos = async (): Promise<PhotoResBody[]> => {
     try {
-        const response = await apiClient.get('/photos'); // Endpoint pour récupérer toutes les photos
-        return response.data; // Renvoie un tableau de toutes les photos
+        const response = await apiClient.get('/photos'); 
+        return response.data; 
     } catch (error) {
         console.error("Erreur lors de la récupération de toutes les photos", error);
         throw error;

@@ -1,7 +1,7 @@
 import { useBeer } from "./hooks/useBeer"
 import { BeerCard } from "../components/beerCard";
 
-export const BeersCatalog: React.FC = () => {
+export const BeersCatalog = () => {
   const {
     beers,
     loading,

@@ -3,7 +3,7 @@ import { Header } from './header';
 import { Navbar } from './navbar';
 import { Footer } from './footer';
 
-export default function Layout(): JSX.Element {
+export const Layout = () => {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Header />

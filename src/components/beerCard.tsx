@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 export const BeerCard = ({ beer }: { beer: BeerResBody }) => {
   
-  const beerImage: string = beer.photos && beer.photos.length > 0 
-  ? beer.photos[0].url 
-  : "../assets/beers/punkIpa.png";
+  const beerImage: string = beer.photos && beer.photos.length > 0 ? beer.photos[0].url : "../assets/beers/punkIpa.png";
 
   return (
     <motion.div

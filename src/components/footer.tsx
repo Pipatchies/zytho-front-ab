@@ -1,7 +1,6 @@
-import React from "react";
 import logo from '../assets/logo_zythologue.webp';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 font-oswald">
       <div className="container mx-auto px-6 ">
