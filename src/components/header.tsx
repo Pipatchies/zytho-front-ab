@@ -13,7 +13,7 @@ export const Header = () => {
         />
         <div className="flex flex-col justify-center items-center h-full bg-black bg-opacity-65 space-y-4">
             <h1 className="font-oswald md:text-8xl text-7xl font-bold text-white shadow-2xl">Zythologue</h1>
-            <h2 className="flex font-oswald md:text-3xl text-2xl font-bold text-white mx-10 text-center">Pour tous les amateurs de mousses artisanales</h2>
+            <h2 className="flex font-oswald md:text-3xl text-2xl font-bold text-white mx-10 text-center">Pour tous les amateurs de mousses faites maison</h2>
         </div>
         <Navbar/>
       </header>

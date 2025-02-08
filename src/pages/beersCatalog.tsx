@@ -1,7 +1,7 @@
 import { useBeer } from "./hooks/useBeer"
 import { BeerCard } from "../components/beerCard";
 
-const BeersCatalog: React.FC = () => {
+export const BeersCatalog: React.FC = () => {
   const {
     beers,
     loading,
@@ -25,15 +25,15 @@ if (error) {
 
 return (
   <div className="">
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto sm:px-32 px-6 py-8">
       <div className="mb-8">
-        <div className="bg-yellow-600 bg-opacity-70 text-white p-4 rounded-lg shadow-md">
-          <h1 className="text-3xl font-bold">Nos Bières Artisanales</h1>
+        <div className="text-gray-900 pb-6">
+          <h1 className="md:text-5xl text-3xl font-bold font-oswald text-center sm:text-left">NOS <span className="text-yellow-600">BINOUZES</span> ARTISANALES</h1>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {beers.map((beer) => (
-        <BeerCard key={beer.id} beer={beer} />
+  <BeerCard key={beer.id} beer={beer} />
       ))}
     </div>
   </div>

@@ -16,10 +16,10 @@ export const Footer: React.FC = () => {
               <a href="/" className="sm:text-5xl text-2xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600">
                 Home
               </a>
-              <a href="/beers" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md">
+              <a href="/beers-catalog" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75">
                 Beers
               </a>
-              <a href="/breweries" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md">
+              <a href="/breweries" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75">
                 Brewerys
               </a>
             </div>
