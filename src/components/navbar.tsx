@@ -22,7 +22,7 @@ export const Navbar = () => {
       >
         <button
           onClick={toggleMenu}
-          className="absolute top-4 right-4 text-white"
+          className="absolute top-4 right-4 text-yellow-600"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export const Navbar = () => {
       </div>
 
       {!isOpen && (
-        <button onClick={toggleMenu} className="fixed top-4 right-4 text-white">
+        <button onClick={toggleMenu} className="fixed top-4 right-4 text-yellow-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
