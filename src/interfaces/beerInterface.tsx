@@ -1,4 +1,3 @@
-// Contenu de la réponse, incluant des informations supplémentaires
 export interface BeerResBody {
     id: number;
     name: string;

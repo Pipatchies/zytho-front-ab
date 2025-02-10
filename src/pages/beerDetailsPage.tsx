@@ -9,9 +9,9 @@ import {
 
 export const BeerDetailsPage = () => {
   const { id } = useParams();
-  const beerId = id ? Number(id) : null; // Conversion en number et gestion du cas null
+  const beerId = id ? Number(id) : null; 
 
-  const { beer, loading, error } = useBeerById(beerId!); // ! pour assurer qu'on passe un number
+  const { beer, ingredients, loading, error } = useBeerById(beerId!);
 
   if (loading) {
     return (
@@ -49,7 +49,7 @@ return (
       </div>
       <h2 className="text-5xl font-bold font-oswald text-center w-full">Détails de la bière</h2>
     </div>
-    <BeerDetailsCard beer={beer} />
+    <BeerDetailsCard beer={beer} ingredients={ingredients} />
   </div>
 );
 };
