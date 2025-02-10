@@ -4,7 +4,7 @@ export interface BeerResBody {
     description: string;
     photos?: { id: number; url: string }[];
     abv: number;
-    price: string;
+    price: number;
     id_brewery: number;
     created_at: Date;
     updated_at: Date;
