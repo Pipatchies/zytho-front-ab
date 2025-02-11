@@ -31,73 +31,71 @@ export const BeersCatalog = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-8">
-      
-      {/* Barre de recherche en haut */}
-      <div className="mb-6">
-      <div className="text-gray-900 pb-6">
-      <h1 className="md:text-5xl text-3xl font-bold font-oswald text-center mb-6">NOS <span className="text-yellow-600">BINOUZES</span> ARTISANALES</h1>
+
+      {/* Titre */}
+      <h1 className="md:text-5xl text-3xl font-bold font-oswald text-center mb-6 pb-10">
+        NOS <span className="text-yellow-600">BINOUZES</span> ARTISANALES
+      </h1>
+
+      {/* Conteneur de la barre de recherche et des filtres */}
+      <div className="flex flex-wrap items-center gap-6 mb-6">
+
+        {/* Barre de recherche */}
         <input
           type="text"
           placeholder="Rechercher une bière..."
           onChange={handleSearch}
-          className="w-1/4 px-4 py-2 border border-yellow-600 rounded-lg "
+          className="flex-1 min-w-[250px] px-4 py-2 border border-yellow-600 rounded-lg"
         />
-      </div>
 
-      {/* Conteneur principal avec sidebar + liste des bières */}
-      <div className="flex gap-8">
-        
-        {/* Sidebar Filtres */}
-        <div className="w-1/4 h-1/4 p-4 border border-yellow-600 rounded-lg shadow-md">
-          <h2 className="text-lg font-bold mb-4">Filtres</h2>
-
-          {/* Filtre par ABV */}
-          <div className="mb-6">
-            <label htmlFor="abvRange" className="block text-sm font-medium text-gray-700">
-              Degré d'alcool: {abvRange} % - 8 %
-            </label>
-            <input
-              id="abvRange"
-              type="range"
-              min="4"
-              max="12"
-              step="0.1"
-              value={abvRange}
-              onChange={handleAbvRangeChange}
-              className="w-full cursor-pointer"
-            />
-          </div>
-
-          {/* Filtre par Prix */}
-          <div>
-            <label htmlFor="priceRange" className="block text-sm font-medium text-gray-700">
-              Prix: 11 € - {priceRange} €
-            </label>
-            <input
-              id="priceRange"
-              type="range"
-              min="0"
-              max="18"
-              step="0.5"
-              value={priceRange}
-              onChange={handlePriceRangeChange}
-              className="w-full cursor-pointer"
-            />
-          </div>
+        {/* Liste déroulante pour ABV */}
+        <div className="flex items-center gap-2">
+          <label htmlFor="abvRange" className="text-sm font-medium text-gray-900 font-nunito">
+            Degré d'alcool:
+          </label>
+          <select
+            id="abvRange"
+            value={abvRange}
+            onChange={handleAbvRangeChange}
+            className="px-3 py-2 border border-yellow-600 rounded-lg"
+          >
+            <option value="all" className="text-center">-- Choisir l'ABV --</option>
+            <option value="under5">Moins de 5 %</option>
+            <option value="5to10">Entre 5 % et 10 %</option>
+            <option value="over10">Plus de 10 %</option>
+          </select>
         </div>
 
-        {/* Liste des bières */}
-        <div className="w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {beers.map((beer) => (
-            <BeerCard key={beer.id} beer={beer} />
-          ))}
+        {/* Liste déroulante pour Prix */}
+        <div className="flex items-center gap-2">
+          <label htmlFor="priceRange" className="text-sm font-medium text-gray-900 font-nunito">
+            Prix :
+          </label>
+          <select
+            id="priceRange"
+            value={priceRange}
+            onChange={handlePriceRangeChange}
+            className="px-3 py-2 border border-yellow-600 rounded-lg"
+          >
+            <option value="all" className="text-center">-- Choisir le prix --</option>
+            <option value="under10">Moins de 10 €</option>
+            <option value="10to15">Entre 10 € et 15 €</option>
+            <option value="over15">Plus de 15 €</option>
+          </select>
         </div>
-
       </div>
-    </div>
+
+      {/* Liste des bières */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {beers.map((beer) => (
+          <BeerCard key={beer.id} beer={beer} />
+        ))}
+      </div>
+
     </div>
   );
 };
 
 export default BeersCatalog;
+
 
