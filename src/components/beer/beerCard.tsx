@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { BeerResBody } from "../interfaces/beerInterface";
+import { BeerResBody } from "../../interfaces/beerInterface";
 import { Link } from "react-router-dom";
 
 export const BeerCard = ({ beer }: { beer: BeerResBody }) => {

@@ -1,6 +1,6 @@
 import { Navbar } from "./navbar";
-import headerImage from '../assets/brewery.jpg';
-import logo from '../assets/logo_zythologue.webp';
+import headerImage from '../../assets/brewery.jpg';
+import logo from '../../assets/logo_zythologue.webp';
 
 export const Header = () => {
     return (

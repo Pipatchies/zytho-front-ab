@@ -1,5 +1,5 @@
-import { BeerResBody } from "../interfaces/beerInterface";
-import { IngredientsBeerResBody } from "../interfaces/ingredientsBeerInterface";
+import { BeerResBody } from "../../interfaces/beerInterface";
+import { IngredientsBeerResBody } from "../../interfaces/ingredientsBeerInterface";
 
 export const BeerDetailsCard = ({ beer, ingredients }: { beer: BeerResBody, ingredients: IngredientsBeerResBody[] }) => {
 

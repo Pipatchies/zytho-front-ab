@@ -1,4 +1,4 @@
-import logo from '../assets/logo_zythologue.webp';
+import logo from '../../assets/logo_zythologue.webp';
 
 export const Footer = () => {
   return (
