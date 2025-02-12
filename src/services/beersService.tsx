@@ -22,3 +22,14 @@ export const getBeerById = async (id: number): Promise<BeerResBody> => {
         throw error;
     }
 };
+
+// Fonction pour récupérer les bières d'une brasserie par son ID
+export const getBeersByBreweryId = async (breweryId: number): Promise<BeerResBody[]> => {
+    try {
+        const response = await apiClient.get<BeerResBody[]>(`beers/brewery/${breweryId}`);
+        return response.data;
+    } catch (error) {
+        console.error("Erreur lors de la récupération des bières de la brasserie", error);
+        throw error;
+    }
+};
