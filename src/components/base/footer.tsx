@@ -1,4 +1,5 @@
 import logo from '../../assets/logo_zythologue.webp';
+import { Link } from "react-router";
 
 export const Footer = () => {
   return (
@@ -12,22 +13,31 @@ export const Footer = () => {
           className="top-4 left-4 sm:w-28 sm:h-28 bg-yellow-200 p-0.5 rounded-2xl shadow-lg w-20 h-20" 
         />
             <div className="flex flex-col mb-4 md:mb-0 gap-2">
-              <a href="/" className="sm:text-5xl text-2xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600">
+              <Link
+            to="/"
+            className="sm:text-5xl text-2xl hover:text-yellow-600 rounded-md py-2 border-b border-yellow-600"
+            >
                 Home
-              </a>
-              <a href="/beers-catalog" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75">
+              </Link>
+              <Link
+              to="/beers-catalog" 
+              className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75"
+              >
                 Beers
-              </a>
-              <a href="/breweries" className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75">
+              </Link>
+              <Link
+              to="/breweries-catalog" 
+              className="sm:text-2xl text-lg hover:text-yellow-600 px-3 py-2 rounded-md opacity-75"
+              >
                 Brewerys
-              </a>
+              </Link>
             </div>
           </div>
 
 
           <div className="flex flex-col gap-4">
-            <a
-              href="https://facebook.com"
+            <Link
+              to="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
               className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
@@ -35,9 +45,9 @@ export const Footer = () => {
             >
               <i className="fab fa-facebook-f"></i>
               <span className="ml-2">Facebook</span>
-            </a>
-            <a
-              href="https://instagram.com"
+            </Link>
+            <Link
+              to="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
@@ -45,9 +55,9 @@ export const Footer = () => {
             >
               <i className="fab fa-instagram"></i>
               <span className="ml-2">Instagram</span>
-            </a>
-            <a
-              href="https://twitter.com"
+            </Link>
+            <Link
+              to="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
               className="sm:text-2xl text-lg flex items-center border-2 border-gray-300 p-2 rounded-lg hover:bg-yellow-600"
@@ -55,7 +65,7 @@ export const Footer = () => {
             >
               <i className="fab fa-twitter"></i>
               <span className="ml-2">Twitter</span>
-            </a>
+            </Link>
           </div>
         </div>
 

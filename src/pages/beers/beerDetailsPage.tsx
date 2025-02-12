@@ -1,12 +1,13 @@
 import { useParams } from "react-router-dom";
 import { useBeerById } from "./hooks/useBeerByID";
 import { BeerDetailsCard } from "../../components/beer/beerDetailsCard";
-import { Link } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { useNavigate } from "react-router-dom";
 
 export const BeerDetailsPage = () => {
   const { id } = useParams();
   const beerId = id ? Number(id) : null;
+  const navigate = useNavigate();
 
   const { 
     beer, 
@@ -39,12 +40,12 @@ export const BeerDetailsPage = () => {
       <div className="">
         {/* Lien vers la page de retour au catalogue des bières */}
         <div className="flex justify-start">
-          <Link
-            to={`/beers-catalog`}
+          <button
+            onClick={() => navigate(-1)}
             className="px-6 py-3 mb-6 md:mb-1 font-semibold font-nunito text-xl text-white bg-gray-900 hover:bg-yellow-600 rounded-lg shadow-md transition-all duration-300 whitespace-nowrap flex items-center"
           >
             <ArrowLeftIcon className="h-6 w-6 mr-2" /> Back
-          </Link>
+          </button>
         </div>
         <h2 className="text-5xl font-bold font-oswald text-center w-full">
           Détails de la bière
