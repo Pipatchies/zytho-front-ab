@@ -63,7 +63,7 @@ export const Navbar = () => {
             <FireIcon className="h-8 w-8 mr-2 mt-1" /> BEERS
           </Link>
           <Link
-            to="/brewerys-catalog"
+            to="/breweries-catalog"
             className="text-white opacity-75 flex hover:text-yellow-600 px-9 py-2 ml-10 rounded-md text-3xl font-semibold font-oswald"
           >
             <BuildingStorefrontIcon className="h-8 w-8 mr-2 mt-1" /> BREWERYS
