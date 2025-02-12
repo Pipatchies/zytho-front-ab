@@ -8,7 +8,11 @@ export const BeerDetailsPage = () => {
   const { id } = useParams();
   const beerId = id ? Number(id) : null;
 
-  const { beer, ingredients, loading, error } = useBeerById(beerId!);
+  const { 
+    beer, 
+    ingredients, 
+    loading, 
+    error } = useBeerById(beerId!);
 
   if (loading) {
     return (

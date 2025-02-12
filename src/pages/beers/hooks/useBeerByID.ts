@@ -37,5 +37,9 @@ export const useBeerById = (beerId: number) => {
     fetchBeer();
   }, [beerId]);
 
-  return { beer, ingredients, loading, error };
+  return { 
+    beer, 
+    ingredients, 
+    loading, 
+    error };
 };
