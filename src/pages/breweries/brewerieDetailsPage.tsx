@@ -12,60 +12,65 @@ export const BreweryDetailsPage = () => {
     const { 
         breweries, 
         loading: breweryLoading, 
-        error: breweryError } = useBrewery();
+        error: breweryError 
+    } = useBrewery();
+
     const { 
         beers, 
         loading: beerLoading, 
-        error: beerError } = useBeerByBreweryId(Number(breweryId));
+        error: beerError 
+    } = useBeerByBreweryId(Number(breweryId));
 
     const brewery = breweries.find((brewery) => brewery.id === Number(breweryId));
 
     if (breweryLoading || beerLoading) {
         return (
-            <div className="flex justify-center items-center min-h-[50vh]">
+            <div className="flex justify-center items-center min-h-[50vh]" role="status">
                 <div className="animate-spin rounded-full h-12 w-12 border-4 border-amber-900 border-t-transparent"></div>
             </div>
         );
     }
+
     if (breweryError || beerError) {
         return (
-            <div className="text-center text-red-600">
+            <div className="text-center text-red-600" aria-live="assertive">
                 {breweryError || beerError}
             </div>
         );
     }
+
     if (!brewery) {
         return (
-            <div className="text-center text-red-600">
+            <div className="text-center text-red-600" aria-live="assertive">
                 Aucune brasserie trouvée.
             </div>
         );
     }
 
     return (
-        <div className="text-gray-900">
-            <div className="flex justify-start">
+        <div className="text-gray-900 px-4 sm:px-8">
+            <div className="flex justify-start mb-6">
                 <Link
                     to={`/breweries-catalog`}
-                    className="px-6 py-3 mb-6 md:mb-1 font-semibold font-nunito text-xl text-white bg-gray-900 hover:bg-yellow-600 rounded-lg shadow-md transition-all duration-300 whitespace-nowrap flex items-center"
+                    className="px-6 py-3 font-semibold text-xl text-white bg-gray-900 hover:bg-yellow-600 rounded-lg shadow-md transition-all duration-300 flex items-center"
+                    aria-label="Retour à la liste des brasseries"
                 >
-                    <ArrowLeftIcon className="h-6 w-6 mr-2" /> Back
+                    <ArrowLeftIcon className="h-6 w-6 mr-2" /> Retour
                 </Link>
             </div>
-            <h2 className="text-5xl font-bold font-oswald text-center w-full py-10">
+            
+            <h2 className="text-3xl sm:text-5xl font-bold font-oswald text-center mb-6">
                 Détails de la brasserie
             </h2>
 
-            {/* Afficher les détails de la brasserie */}
             <div className="ring-2 ring-yellow-600 p-8 rounded-lg mb-12">
                 <h2 className="text-4xl font-bold mb-4">{brewery.name}</h2>
-                    <div className="flex flex-row justify-between w-full">
-                        <p className="text-base italic">{brewery.description}</p>
-                        <p className="text-base">📍 {brewery.address}, {brewery.country}</p>
-                    </div>
+                <div className="flex flex-col sm:flex-row justify-between w-full mb-4">
+                    <p className="text-base italic mb-2 sm:mb-0">{brewery.description}</p>
+                    <p className="text-base">📍 {brewery.address}, {brewery.country}</p>
+                </div>
             </div>
 
-            {/* Afficher les bières de la brasserie */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {beers.map((beer) => (
                     <BeerCard key={beer.id} beer={beer} />
@@ -76,3 +81,4 @@ export const BreweryDetailsPage = () => {
 };
 
 export default BreweryDetailsPage;
+

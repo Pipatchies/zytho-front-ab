@@ -16,9 +16,9 @@ export const Navbar = () => {
   return (
     <nav className="relative z-50">
       <div
-        className={`fixed top-0 right-0 h-screen bg-gray-900 shadow-lg transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } w-2/6 transition-transform duration-300 ease-in-out max-lg:w-3/6 max-md:w-4/6 max-sm:w-full`}
+        className={`fixed top-0 right-0 h-screen bg-gray-900 shadow-lg transform 
+          ${ isOpen ? "translate-x-0" : "translate-x-full" } 
+          w-2/6 transition-transform duration-300 ease-in-out max-lg:w-3/6 max-md:w-4/6 max-sm:w-full`}
       >
         <button
           onClick={toggleMenu}
